@@ -40,14 +40,4 @@ Then visit `http://localhost:3000` in your browser.
 
 ---
 
-## 🌐 Free Instant Deployment
-
-### Method 1: GitHub Pages (Recommended)
-1. Push this folder to a GitHub repository (e.g., `Vaibhav-learn/portfolio` or `Vaibhav-learn/Vaibhav-learn.github.io`).
-2. Go to **Settings** > **Pages**.
-3. Under **Build and deployment** > **Branch**, select `main` (or `master`) and `/ (root)`. Click **Save**.
-4. Your portfolio will be live at `https://vaibhav-learn.github.io`!
-
-### Method 2: Vercel or Netlify
-1. Drag and drop this folder onto [Netlify Drop](https://app.netlify.com/drop) or import from GitHub on [Vercel](https://vercel.com).
-2. It will deploy automatically within 10 seconds.
+Available on https://reliable-rolypoly-7251e6.netlify.app
