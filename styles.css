@@ -1,0 +1,131 @@
+/* Custom Styles & Animation Utilities */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #070b14;
+  --bg-secondary: #0f172a;
+  --accent-teal: #14b8a6;
+  --accent-teal-glow: rgba(20, 184, 166, 0.25);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+code, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #070b14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glow & Glass Utilities */
+.glow-teal {
+  box-shadow: 0 0 35px -5px var(--accent-teal-glow);
+}
+
+.glow-teal-sm {
+  box-shadow: 0 0 15px -3px rgba(20, 184, 166, 0.35);
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(45, 212, 191, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -10px rgba(20, 184, 166, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 55%, #2dd4bf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-teal {
+  background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%);
+}
+
+.grid-background {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+.radial-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.15) 0%, transparent 60%);
+}
+
+/* Toast Animation */
+.toast-enter {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-exit {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* Keyframes for subtle pulsing/floating */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+/* Print Styles for Resume Modal */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-resume, #printable-resume * {
+    visibility: visible;
+  }
+  #printable-resume {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

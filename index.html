@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaibhav Balwant Singh | Software Engineer (Backend & AI/ML)</title>
+  <meta name="description" content="Portfolio of Vaibhav Balwant Singh – Backend Software Engineer specializing in Python, FastAPI, PostgreSQL, Docker, and Applied AI/ML.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2314b8a6' stroke-width='2'><polyline points='4 17 10 11 4 5'></polyline><line x1='12' y1='19' x2='20' y2='19'></line></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+            },
+            dark: {
+              800: '#0f172a',
+              900: '#0b0f19',
+              950: '#070b14',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#070b14] text-slate-100 antialiased selection:bg-teal-500/30 selection:text-teal-200 grid-background relative">
+
+  <!-- Top Ambient Glow -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[400px] radial-glow pointer-events-none z-0"></div>
+
+  <!-- NAVBAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2.5 group">
+          <div class="w-9 h-9 rounded-lg bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 group-hover:border-teal-400 group-hover:glow-teal-sm transition-all duration-300">
+            <i data-lucide="terminal" class="w-5 h-5"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-mono text-sm font-bold tracking-wider text-slate-100 group-hover:text-teal-300 transition-colors">
+              vaibhav<span class="text-teal-400">@backend</span>
+            </span>
+            <span class="text-[10px] text-slate-400 tracking-tight font-mono">
+              :~$ python main.py
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 border border-slate-800/80 px-3.5 py-1.5 rounded-full backdrop-blur-md shadow-inner">
+          <a href="#about" class="px-3.5 py-1 text-xs font-medium text-slate-300 hover:text-teal-300 transition-colors rounded-full hover:bg-slate-800/60">About</a>
+          <a href="#skills" class="px-3.5 py-1 text-xs font-medium text-slate-300 hover:text-teal-300 transition-colors rounded-full hover:bg-slate-800/60">Skills</a>
+          <a href="#experience" class="px-3.5 py-1 text-xs font-medium text-slate-300 hover:text-teal-300 transition-colors rounded-full hover:bg-slate-800/60">Experience</a>
+          <a href="#projects" class="px-3.5 py-1 text-xs font-medium text-slate-300 hover:text-teal-300 transition-colors rounded-full hover:bg-slate-800/60">Projects</a>
+          <a href="#achievements" class="px-3.5 py-1 text-xs font-medium text-slate-300 hover:text-teal-300 transition-colors rounded-full hover:bg-slate-800/60">Achievements</a>
+          <a href="#education" class="px-3.5 py-1 text-xs font-medium text-slate-300 hover:text-teal-300 transition-colors rounded-full hover:bg-slate-800/60">Education</a>
+          <a href="#contact" class="px-3.5 py-1 text-xs font-medium text-slate-300 hover:text-teal-300 transition-colors rounded-full hover:bg-slate-800/60">Contact</a>
+        </nav>
+
+        <!-- Socials & Actions -->
+        <div class="hidden lg:flex items-center gap-2.5">
+          <a href="https://github.com/Vaibhav-learn" target="_blank" rel="noreferrer" class="p-2 text-slate-400 hover:text-white hover:bg-slate-800/80 rounded-lg transition-colors border border-transparent hover:border-slate-700" title="GitHub">
+            <i data-lucide="github" class="w-4 h-4"></i>
+          </a>
+          <a href="https://linkedin.com/in/V28" target="_blank" rel="noreferrer" class="p-2 text-slate-400 hover:text-sky-400 hover:bg-slate-800/80 rounded-lg transition-colors border border-transparent hover:border-slate-700" title="LinkedIn">
+            <i data-lucide="linkedin" class="w-4 h-4"></i>
+          </a>
+          <a href="https://leetcode.com/vs05" target="_blank" rel="noreferrer" class="p-2 text-slate-400 hover:text-amber-400 hover:bg-slate-800/80 rounded-lg transition-colors border border-transparent hover:border-slate-700" title="LeetCode (vs05)">
+            <i data-lucide="code-2" class="w-4 h-4"></i>
+          </a>
+
+          <button id="open-resume-btn" class="flex items-center gap-2 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-400 hover:to-teal-500 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs transition-all duration-300 shadow-md shadow-teal-500/20 hover:shadow-teal-500/30 hover:scale-[1.02] active:scale-[0.98]">
+            <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+            <span>Resume PDF</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex md:hidden items-center gap-2">
+          <button id="mobile-resume-btn" class="px-3 py-1.5 bg-teal-500/10 border border-teal-500/30 text-teal-400 rounded-lg text-xs font-semibold flex items-center gap-1.5">
+            <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+            <span>Resume</span>
+          </button>
+          <button id="mobile-menu-btn" class="p-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg" aria-label="Toggle Navigation">
+            <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0a0f1d]/95 border-b border-slate-800 px-4 pt-3 pb-6 backdrop-blur-xl transition-all">
+      <div class="grid grid-cols-2 gap-2 pt-2">
+        <a href="#about" class="mobile-nav-link px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-300 hover:bg-slate-800/50 rounded-lg">About</a>
+        <a href="#skills" class="mobile-nav-link px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-300 hover:bg-slate-800/50 rounded-lg">Skills</a>
+        <a href="#experience" class="mobile-nav-link px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-300 hover:bg-slate-800/50 rounded-lg">Experience</a>
+        <a href="#projects" class="mobile-nav-link px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-300 hover:bg-slate-800/50 rounded-lg">Projects</a>
+        <a href="#achievements" class="mobile-nav-link px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-300 hover:bg-slate-800/50 rounded-lg">Achievements</a>
+        <a href="#education" class="mobile-nav-link px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-300 hover:bg-slate-800/50 rounded-lg">Education</a>
+        <a href="#contact" class="mobile-nav-link px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-300 hover:bg-slate-800/50 rounded-lg">Contact</a>
+      </div>
+      <div class="mt-4 pt-4 border-t border-slate-800 flex items-center justify-around">
+        <a href="https://github.com/Vaibhav-learn" target="_blank" rel="noreferrer" class="flex items-center gap-1.5 text-xs text-slate-400 hover:text-white">
+          <i data-lucide="github" class="w-4 h-4"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/V28" target="_blank" rel="noreferrer" class="flex items-center gap-1.5 text-xs text-slate-400 hover:text-sky-400">
+          <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+        </a>
+        <a href="https://leetcode.com/vs05" target="_blank" rel="noreferrer" class="flex items-center gap-1.5 text-xs text-slate-400 hover:text-amber-400">
+          <i data-lucide="code-2" class="w-4 h-4"></i> LeetCode
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-24 sm:pt-28">
+
+    <!-- HERO SECTION -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Copy & Actions -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Availability Pill -->
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/25 text-teal-300 text-xs font-medium">
+            <span class="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
+            <span>Available for Software Engineer Roles & Internships</span>
+          </div>
+
+          <!-- Main Title -->
+          <div class="space-y-2">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+              Hi, I'm <span class="gradient-text">Vaibhav Balwant Singh</span>
+            </h1>
+            <p class="text-lg sm:text-xl font-medium text-teal-400 font-mono">
+              Software Engineer (Backend) | Applied AI/ML
+            </p>
+          </div>
+
+          <!-- Bio -->
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Passionate backend engineer with production experience designing high-concurrency 
+            <span class="text-white font-medium">FastAPI & Python</span> microservices, robust 
+            <span class="text-white font-medium">PostgreSQL</span> architectures, and shipping scalable systems with 
+            <span class="text-white font-medium">Docker, AWS, and CI/CD</span>. Experienced in applied 
+            <span class="text-teal-300 font-medium">AI/ML (LightGBM, YOLOv8, and Gemini LLMs)</span>.
+          </p>
+
+          <!-- Quick Specs List -->
+          <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+            <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700/60 text-slate-300 flex items-center gap-1.5">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-400"></i> Dehradun, India
+            </span>
+            <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700/60 text-slate-300 flex items-center gap-1.5">
+              <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-teal-400"></i> B.Tech CSE (AI/ML) · UPES
+            </span>
+            <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700/60 text-slate-300 flex items-center gap-1.5">
+              <i data-lucide="award" class="w-3.5 h-3.5 text-amber-400"></i> 2x Hackathon Winner
+            </span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="#projects" class="px-6 py-3 rounded-lg bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm flex items-center gap-2 shadow-lg shadow-teal-500/25 transition-all duration-200 hover:scale-[1.02]">
+              <span>Explore Projects</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+
+            <button id="hero-resume-btn" class="px-5 py-3 rounded-lg bg-slate-800/90 hover:bg-slate-750 text-slate-200 hover:text-white font-semibold text-sm border border-slate-700 hover:border-teal-500/50 flex items-center gap-2 transition-all duration-200">
+              <i data-lucide="file-text" class="w-4 h-4 text-teal-400"></i>
+              <span>View Resume</span>
+            </button>
+
+            <button onclick="copyToClipboard('vaibhav.122528@gmail.com', 'Email copied to clipboard!')" class="px-4 py-3 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-teal-300 font-medium text-xs border border-slate-800 flex items-center gap-2 transition-colors" title="Click to copy email">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <span>vaibhav.122528@gmail.com</span>
+            </button>
+          </div>
+
+          <!-- Key Metrics -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-800/80">
+            <div class="glass-panel p-3.5 rounded-xl border border-slate-800/80">
+              <div class="text-2xl sm:text-3xl font-extrabold text-teal-400 font-mono">2</div>
+              <div class="text-[11px] text-slate-400 font-medium leading-snug">Production Internships</div>
+            </div>
+            <div class="glass-panel p-3.5 rounded-xl border border-slate-800/80">
+              <div class="text-2xl sm:text-3xl font-extrabold text-teal-400 font-mono">250K+</div>
+              <div class="text-[11px] text-slate-400 font-medium leading-snug">Records Modeled</div>
+            </div>
+            <div class="glass-panel p-3.5 rounded-xl border border-slate-800/80">
+              <div class="text-2xl sm:text-3xl font-extrabold text-teal-400 font-mono">-20%</div>
+              <div class="text-[11px] text-slate-400 font-medium leading-snug">Query Latency</div>
+            </div>
+            <div class="glass-panel p-3.5 rounded-xl border border-slate-800/80">
+              <div class="text-2xl sm:text-3xl font-extrabold text-teal-400 font-mono">3+</div>
+              <div class="text-[11px] text-slate-400 font-medium leading-snug">Hackathon Awards</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Terminal Preview -->
+        <div class="lg:col-span-5">
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-800/90 shadow-2xl relative">
+            
+            <!-- Terminal Header -->
+            <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+              </div>
+              <span class="font-mono text-xs text-slate-400">vaibhav_backend_profile.py</span>
+              <div class="text-slate-500 text-xs">
+                <i data-lucide="shield-check" class="w-4 h-4 text-teal-400 inline"></i>
+              </div>
+            </div>
+
+            <!-- Terminal Code Body -->
+            <div class="p-5 font-mono text-xs leading-relaxed text-slate-300 space-y-2 bg-[#090e1b]/95 overflow-x-auto">
+              <p><span class="text-purple-400">class</span> <span class="text-amber-300">BackendEngineer</span>:</p>
+              <p class="pl-4 text-slate-400"># Core stack & expertise</p>
+              <p class="pl-4"><span class="text-sky-400">name</span> = <span class="text-emerald-300">"Vaibhav Balwant Singh"</span></p>
+              <p class="pl-4"><span class="text-sky-400">education</span> = <span class="text-emerald-300">"UPES (B.Tech CSE AI/ML)"</span></p>
+              <p class="pl-4"><span class="text-sky-400">cgpa</span> = <span class="text-teal-300">7.98</span></p>
+              
+              <div class="py-1"></div>
+              <p class="pl-4"><span class="text-purple-400">async def</span> <span class="text-blue-400">architect_services</span>(self):</p>
+              <p class="pl-8"><span class="text-purple-400">return</span> {</p>
+              <p class="pl-12"><span class="text-teal-300">"frameworks"</span>: [<span class="text-emerald-300">"FastAPI"</span>, <span class="text-emerald-300">"Flask"</span>, <span class="text-emerald-300">"REST"</span>, <span class="text-emerald-300">"WebSockets"</span>],</p>
+              <p class="pl-12"><span class="text-teal-300">"storage"</span>: [<span class="text-emerald-300">"PostgreSQL"</span>, <span class="text-emerald-300">"SQLAlchemy"</span>, <span class="text-emerald-300">"Alembic"</span>],</p>
+              <p class="pl-12"><span class="text-teal-300">"devops"</span>: [<span class="text-emerald-300">"Docker"</span>, <span class="text-emerald-300">"AWS"</span>, <span class="text-emerald-300">"GitHub Actions CI/CD"</span>],</p>
+              <p class="pl-12"><span class="text-teal-300">"applied_ai"</span>: [<span class="text-emerald-300">"Gemini LLM"</span>, <span class="text-emerald-300">"RAG"</span>, <span class="text-emerald-300">"LightGBM"</span>, <span class="text-emerald-300">"YOLOv8"</span>]</p>
+              <p class="pl-8">}</p>
+
+              <div class="py-1"></div>
+              <p class="pl-4"><span class="text-purple-400">def</span> <span class="text-blue-400">production_impact</span>(self):</p>
+              <p class="pl-8"><span class="text-purple-400">return</span> <span class="text-teal-300">"Zero-deficit inventory ledgers & sub-second API latencies"</span></p>
+            </div>
+
+            <!-- Terminal Footer Status Bar -->
+            <div class="bg-slate-900/90 px-4 py-2 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-400">
+              <span class="flex items-center gap-1.5 text-teal-400">
+                <span class="w-2 h-2 rounded-full bg-teal-400"></span> Pytest 100% Passed
+              </span>
+              <span>UTF-8 · Python 3.12</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-xs uppercase font-mono tracking-widest text-teal-400 mb-2">01. Overview</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">Engineering Mindset & Background</h3>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Left: Text Summary -->
+        <div class="lg:col-span-2 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p class="glass-panel p-6 rounded-2xl border border-slate-800">
+            I am a software engineer focused on building robust, high-performance backends and real-world applied AI pipelines. 
+            Across two internships at <span class="text-teal-300 font-semibold">Naiyo</span> and <span class="text-teal-300 font-semibold">Paatti Vaithiyapodi</span>, 
+            I have architected scalable REST endpoints, optimized PostgreSQL database schemas (reducing query response time by 20%), 
+            and deployed machine learning models to production.
+          </p>
+
+          <p class="glass-panel p-6 rounded-2xl border border-slate-800">
+            I enjoy working on correctness-critical systems—such as building double-entry inventory ledgers that guarantee zero stock deficits, 
+            designing finite state machines for order processing, and setting up asynchronous pipelines with 
+            <span class="text-white font-medium">FastAPI, WebSockets, JWT/bcrypt auth, and role-based access control</span>. 
+            My applied AI experience spans training segmented LightGBM pricing models on 250K+ pharmaceutical records (improving accuracy to 82%) 
+            and creating automated computer vision & LLM verification systems with YOLOv8 and Google Gemini.
+          </p>
+        </div>
+
+        <!-- Right: Pillars / Highlights Card -->
+        <div class="space-y-4">
+          <div class="glass-panel p-5 rounded-xl border border-slate-800 hover:border-teal-500/40 transition-colors">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="p-2 rounded-lg bg-teal-500/10 text-teal-400">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-bold text-white text-sm">System Design & Concurrency</h4>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Async I/O patterns with FastAPI, robust state machines, and WebSocket connections for real-time live worker telemetry.
+            </p>
+          </div>
+
+          <div class="glass-panel p-5 rounded-xl border border-slate-800 hover:border-teal-500/40 transition-colors">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="p-2 rounded-lg bg-teal-500/10 text-teal-400">
+                <i data-lucide="database" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-bold text-white text-sm">Database & Ledger Integrity</h4>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Relational schema modeling with PostgreSQL, Alembic migration versioning, query tuning, and double-entry ledgers.
+            </p>
+          </div>
+
+          <div class="glass-panel p-5 rounded-xl border border-slate-800 hover:border-teal-500/40 transition-colors">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="p-2 rounded-lg bg-teal-500/10 text-teal-400">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-bold text-white text-sm">Applied AI & LLMs</h4>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Building RAG workflows, vector database embeddings, prompt engineering, and multimodal Gemini/YOLOv8 vision pipelines.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <h2 class="text-xs uppercase font-mono tracking-widest text-teal-400 mb-2">02. Stack</h2>
+          <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">Technical Skills</h3>
+        </div>
+        
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-1.5 p-1 bg-slate-900/80 border border-slate-800 rounded-lg" id="skills-tabs">
+          <button class="skill-filter-btn px-3 py-1 rounded-md text-xs font-semibold bg-teal-500 text-slate-950 transition-all" data-category="all">All</button>
+          <button class="skill-filter-btn px-3 py-1 rounded-md text-xs font-medium text-slate-400 hover:text-white transition-all" data-category="backend">Backend & APIs</button>
+          <button class="skill-filter-btn px-3 py-1 rounded-md text-xs font-medium text-slate-400 hover:text-white transition-all" data-category="db">Databases</button>
+          <button class="skill-filter-btn px-3 py-1 rounded-md text-xs font-medium text-slate-400 hover:text-white transition-all" data-category="devops">DevOps & Cloud</button>
+          <button class="skill-filter-btn px-3 py-1 rounded-md text-xs font-medium text-slate-400 hover:text-white transition-all" data-category="ai">AI / ML</button>
+          <button class="skill-filter-btn px-3 py-1 rounded-md text-xs font-medium text-slate-400 hover:text-white transition-all" data-category="core">Core CS</button>
+        </div>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="skills-grid">
+        
+        <!-- Backend & APIs -->
+        <div class="skill-card glass-card p-6 rounded-2xl" data-category="backend">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2.5 rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/20">
+              <i data-lucide="server" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base">Backend & APIs</h4>
+              <p class="text-[11px] text-slate-400">High-concurrency services</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">FastAPI</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">Flask</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">RESTful APIs</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">WebSockets</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">JWT / bcrypt</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-teal-300 font-mono">Role-Based Access Control</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-card glass-card p-6 rounded-2xl" data-category="db">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2.5 rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/20">
+              <i data-lucide="database" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base">Databases & Storage</h4>
+              <p class="text-[11px] text-slate-400">Data integrity & optimization</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">PostgreSQL</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">SQLAlchemy ORM</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">Alembic Migrations</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">Schema Normalization</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-teal-300 font-mono">Query Indexing (-20% Latency)</span>
+          </div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="skill-card glass-card p-6 rounded-2xl" data-category="devops">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2.5 rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/20">
+              <i data-lucide="cloud" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base">Cloud, DevOps & Testing</h4>
+              <p class="text-[11px] text-slate-400">CI/CD pipelines & deployment</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">Docker</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">Docker Compose</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">AWS (EC2, S3)</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">GitHub Actions CI/CD</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">pytest</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-teal-300 font-mono">Linux / Bash</span>
+          </div>
+        </div>
+
+        <!-- AI / ML & LLMs -->
+        <div class="skill-card glass-card p-6 rounded-2xl" data-category="ai">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2.5 rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/20">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base">AI / ML & LLMs</h4>
+              <p class="text-[11px] text-slate-400">Applied machine intelligence</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">Gemini LLM API</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">RAG Fundamentals</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">Vector Databases</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">Embeddings</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">Prompt Engineering</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-teal-300 font-mono">LightGBM (Tweedie)</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-teal-300 font-mono">YOLOv8 Vision</span>
+          </div>
+        </div>
+
+        <!-- Languages & Core CS -->
+        <div class="skill-card glass-card p-6 rounded-2xl" data-category="core">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2.5 rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/20">
+              <i data-lucide="code" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base">Languages & Core CS</h4>
+              <p class="text-[11px] text-slate-400">Algorithmic foundations</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-teal-300 font-mono">Python (Expert)</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">Java</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">Data Structures & Algos</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">OOP Design</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/90 border border-slate-700/60 text-slate-200 font-mono">System Design</span>
+          </div>
+        </div>
+
+        <!-- Problem Solving Spotlight -->
+        <div class="skill-card glass-card p-6 rounded-2xl" data-category="core">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
+              <i data-lucide="terminal" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base">Coding Profiles</h4>
+              <p class="text-[11px] text-slate-400">Continuous algorithmic practice</p>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <a href="https://leetcode.com/vs05" target="_blank" rel="noreferrer" class="flex items-center justify-between p-2 rounded-lg bg-slate-900/60 hover:bg-slate-800 text-xs border border-slate-800 transition-colors group">
+              <span class="flex items-center gap-2 text-slate-300 group-hover:text-amber-300">
+                <i data-lucide="code-2" class="w-4 h-4 text-amber-400"></i> LeetCode: <span class="font-mono text-white">vs05</span>
+              </span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-amber-300"></i>
+            </a>
+            <a href="https://github.com/Vaibhav-learn" target="_blank" rel="noreferrer" class="flex items-center justify-between p-2 rounded-lg bg-slate-900/60 hover:bg-slate-800 text-xs border border-slate-800 transition-colors group">
+              <span class="flex items-center gap-2 text-slate-300 group-hover:text-teal-300">
+                <i data-lucide="github" class="w-4 h-4 text-teal-400"></i> GitHub: <span class="font-mono text-white">Vaibhav-learn</span>
+              </span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-teal-300"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-xs uppercase font-mono tracking-widest text-teal-400 mb-2">03. Career</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">Professional Experience</h3>
+      </div>
+
+      <div class="relative border-l border-slate-800 ml-4 sm:ml-8 space-y-12">
+
+        <!-- Experience 1: Naiyo -->
+        <div class="relative pl-6 sm:pl-10 group">
+          <!-- Timeline Node -->
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-900 border-2 border-teal-400 group-hover:scale-125 transition-transform duration-300 group-hover:glow-teal-sm"></div>
+
+          <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800/90">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-xl font-bold text-white">Full Stack Developer Intern</h4>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-teal-500/10 text-teal-300 border border-teal-500/30">Backend & ML</span>
+                </div>
+                <p class="text-sm font-semibold text-teal-400">Naiyo <span class="text-slate-400 font-normal">· Remote</span></p>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs font-mono text-slate-300">
+                <i data-lucide="calendar" class="w-3.5 h-3.5 text-teal-400"></i> Apr 2026 – Aug 2026
+              </span>
+            </div>
+
+            <ul class="space-y-3 text-slate-300 text-sm leading-relaxed mb-6">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                <span>Redesigned the PostgreSQL schema and optimized complex indexing and queries for the prediction service, <strong class="text-white">reducing data retrieval latency by 20%</strong>.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                <span>Improved medicine price (MRP) prediction accuracy from <strong class="text-white">75% to 82%</strong> by replacing a single monolithic model with segmented, tier-based <strong class="text-teal-300">LightGBM models (Tweedie regression)</strong> trained on a 250,000-row pharmaceutical dataset.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/80">
+              <span class="px-2.5 py-1 text-xs rounded bg-slate-900 border border-slate-800 text-slate-300 font-mono">Python</span>
+              <span class="px-2.5 py-1 text-xs rounded bg-slate-900 border border-slate-800 text-slate-300 font-mono">LightGBM</span>
+              <span class="px-2.5 py-1 text-xs rounded bg-slate-900 border border-slate-800 text-slate-300 font-mono">PostgreSQL</span>
+              <span class="px-2.5 py-1 text-xs rounded bg-slate-900 border border-slate-800 text-slate-300 font-mono">Tweedie Regression</span>
+              <span class="px-2.5 py-1 text-xs rounded bg-slate-900 border border-slate-800 text-slate-300 font-mono">Query Optimization</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2: Paatti Vaithiyapodi -->
+        <div class="relative pl-6 sm:pl-10 group">
+          <!-- Timeline Node -->
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-900 border-2 border-slate-600 group-hover:border-teal-400 group-hover:scale-125 transition-transform duration-300"></div>
+
+          <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800/90">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-xl font-bold text-white">Backend Developer Intern & Project Team Lead</h4>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-blue-500/10 text-blue-300 border border-blue-500/30">Team Leadership</span>
+                </div>
+                <p class="text-sm font-semibold text-teal-400">Paatti Vaithiyapodi <span class="text-slate-400 font-normal">· Remote</span></p>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs font-mono text-slate-300">
+                <i data-lucide="calendar" class="w-3.5 h-3.5 text-teal-400"></i> Jun 2025 – Aug 2025
+              </span>
+            </div>
+
+            <ul class="space-y-3 text-slate-300 text-sm leading-relaxed mb-6">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                <span>Architected scalable <strong class="text-white">Flask backend modules</strong> for order and wishlist management, designing the relational data models and REST endpoints powering the client-facing mobile application.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                <span>Refactored and tuned REST APIs to eliminate serialization and query bottlenecks, improving throughput and response latency across core services.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                <span><strong class="text-white">Led a cross-functional engineering team</strong> to design, implement, test, and ship the Flask mobile backend from initial concept to live deployment.</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/80">
+              <span class="px-2.5 py-1 text-xs rounded bg-slate-900 border border-slate-800 text-slate-300 font-mono">Python</span>
+              <span class="px-2.5 py-1 text-xs rounded bg-slate-900 border border-slate-800 text-slate-300 font-mono">Flask</span>
+              <span class="px-2.5 py-1 text-xs rounded bg-slate-900 border border-slate-800 text-slate-300 font-mono">PostgreSQL</span>
+              <span class="px-2.5 py-1 text-xs rounded bg-slate-900 border border-slate-800 text-slate-300 font-mono">REST Architecture</span>
+              <span class="px-2.5 py-1 text-xs rounded bg-slate-900 border border-slate-800 text-slate-300 font-mono">Team Leadership</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-xs uppercase font-mono tracking-widest text-teal-400 mb-2">04. Engineering</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">Featured Projects</h3>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <!-- Project 1: Plasto -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-slate-800/90 flex flex-col justify-between">
+          <div class="p-6 sm:p-8">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-300 border border-amber-500/25 flex items-center gap-1.5 font-mono">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> In Progress
+              </span>
+              <a href="https://github.com/Vaibhav-learn" target="_blank" rel="noreferrer" class="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors flex items-center gap-1.5 text-xs font-medium" title="View Source on GitHub">
+                <i data-lucide="github" class="w-4 h-4"></i> GitHub
+              </a>
+            </div>
+
+            <h4 class="text-2xl font-bold text-white mb-2">Plasto – Distribution Agency Management System</h4>
+            <p class="text-slate-400 text-xs font-medium mb-4">Supply Chain Backend · Zero-Deficit Ledger · Real-Time WebSockets</p>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              A high-reliability distribution management backend built with <strong class="text-teal-300">FastAPI & PostgreSQL</strong>, 
+              featuring server-side RBAC, double-entry inventory ledger accounting, and live WebSocket telemetry for field dispatchers.
+            </p>
+
+            <!-- Key Architectural Highlights -->
+            <div class="space-y-3 mb-6 bg-slate-900/60 p-4 rounded-xl border border-slate-800/70 text-xs text-slate-300">
+              <div class="flex items-start gap-2">
+                <i data-lucide="shield-check" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                <span><strong class="text-white">Server-side RBAC:</strong> JWT/bcrypt auth with role barriers (admin, office worker, field agent) on every protected endpoint.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="lock" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                <span><strong class="text-white">Zero-Deficit Ledger:</strong> Stock modeled as an immutable movement ledger mathematically prevented from dropping below zero.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="activity" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                <span><strong class="text-white">State Machine & Live Telemetry:</strong> Strict approve-then-dispatch order states with real-time field tracking via WebSockets.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="git-branch" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                <span><strong class="text-white">CI/CD & Testing:</strong> Comprehensive test suites with pytest, database migrations via Alembic, shipped with Docker & AWS.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Tech Stack -->
+          <div class="p-6 bg-slate-900/80 border-t border-slate-800">
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">FastAPI</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">PostgreSQL</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">SQLAlchemy</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Alembic</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">WebSockets</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Docker</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">AWS</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">pytest</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Chokho AI -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-slate-800/90 flex flex-col justify-between">
+          <div class="p-6 sm:p-8">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-teal-500/10 text-teal-300 border border-teal-500/25 flex items-center gap-1.5 font-mono">
+                <i data-lucide="check" class="w-3.5 h-3.5"></i> Dec 2025 – Apr 2026
+              </span>
+              <div class="flex items-center gap-2">
+                <a href="https://github.com/Vaibhav-learn" target="_blank" rel="noreferrer" class="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors flex items-center gap-1 text-xs font-medium">
+                  <i data-lucide="github" class="w-4 h-4"></i> GitHub
+                </a>
+                <a href="https://github.com/Vaibhav-learn" target="_blank" rel="noreferrer" class="p-2 text-teal-400 hover:text-teal-300 hover:bg-slate-800 rounded-lg transition-colors flex items-center gap-1 text-xs font-medium">
+                  <i data-lucide="external-link" class="w-4 h-4"></i> Demo
+                </a>
+              </div>
+            </div>
+
+            <h4 class="text-2xl font-bold text-white mb-2">Chokho AI – Waste Detection and Route Optimization</h4>
+            <p class="text-slate-400 text-xs font-medium mb-4">Computer Vision · Gemini API Multi-Stage Inference · TSP Routing</p>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              An automated civic hygiene pipeline combining edge <strong class="text-teal-300">YOLOv8</strong> object detection, 
+              <strong class="text-teal-300">Gemini API</strong> multimodal validation, and combinatorial optimization for municipal logistics.
+            </p>
+
+            <!-- Key Architectural Highlights -->
+            <div class="space-y-3 mb-6 bg-slate-900/60 p-4 rounded-xl border border-slate-800/70 text-xs text-slate-300">
+              <div class="flex items-start gap-2">
+                <i data-lucide="eye" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                <span><strong class="text-white">Multi-Stage Inference:</strong> Async FastAPI pipeline executing YOLOv8 + Gemini validation, yielding 70–96% detection accuracy across diverse conditions.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                <span><strong class="text-white">Automated Cleanup Verification:</strong> Eliminates human audit overhead through GPS consistency checks and automated before/after photo comparisons.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="navigation" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                <span><strong class="text-white">TSP Route Optimization:</strong> Leveraged K-Means clustering and Traveling Salesperson Problem algorithms to minimize municipal vehicle travel distances.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="image" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+                <span><strong class="text-white">Cloud Storage & DB:</strong> Geotagged image asset management via Cloudinary and relational metadata stored in PostgreSQL.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Tech Stack -->
+          <div class="p-6 bg-slate-900/80 border-t border-slate-800">
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">FastAPI</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">YOLOv8</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Gemini API</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">PostgreSQL</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Cloudinary</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">K-Means</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">TSP Optimization</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS & CERTIFICATIONS -->
+    <section id="achievements" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-xs uppercase font-mono tracking-widest text-teal-400 mb-2">05. Recognition</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">Achievements & Certifications</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1 -->
+        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+          <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 w-fit mb-4">
+            <i data-lucide="trophy" class="w-5 h-5"></i>
+          </div>
+          <span class="text-[10px] uppercase font-mono tracking-wider text-teal-400 font-semibold">2nd Place</span>
+          <h4 class="text-lg font-bold text-white mt-1 mb-2">UDBHAV AI Hackathon</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Uttarakhand AI Mission Hackathon (20+ teams). Built and pitched an impactful AI-driven backend architecture under competitive constraints.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+          <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 w-fit mb-4">
+            <i data-lucide="trophy" class="w-5 h-5"></i>
+          </div>
+          <span class="text-[10px] uppercase font-mono tracking-wider text-teal-400 font-semibold">2nd Place</span>
+          <h4 class="text-lg font-bold text-white mt-1 mb-2">PROTORUSH 2.0 (ACM)</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            ACM hackathon runner-up. Designed and implemented rapid end-to-end working software prototype within 24 hours.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+          <div class="p-2.5 rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/20 w-fit mb-4">
+            <i data-lucide="flag" class="w-5 h-5"></i>
+          </div>
+          <span class="text-[10px] uppercase font-mono tracking-wider text-teal-400 font-semibold">Top 15 Finalist</span>
+          <h4 class="text-lg font-bold text-white mt-1 mb-2">Build4Bharat</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Ranked among the Top 15 teams out of 100+ participating teams nationwide for scalable digital commerce and logistics systems.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+          <div class="p-2.5 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 w-fit mb-4">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <span class="text-[10px] uppercase font-mono tracking-wider text-blue-400 font-semibold">National Selection</span>
+          <h4 class="text-lg font-bold text-white mt-1 mb-2">Smart India Hackathon (SIH)</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Shortlisted among the top 50 teams in the institute-level round of Smart India Hackathon, India's premier national competition.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+          <div class="p-2.5 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20 w-fit mb-4">
+            <i data-lucide="badge-check" class="w-5 h-5"></i>
+          </div>
+          <span class="text-[10px] uppercase font-mono tracking-wider text-purple-400 font-semibold">Certification</span>
+          <h4 class="text-lg font-bold text-white mt-1 mb-2">B10x Venture Program</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Startup-building certification program covering tech product ideation, unit economics, business modeling, and developer pitching.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+          <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 w-fit mb-4">
+            <i data-lucide="users" class="w-5 h-5"></i>
+          </div>
+          <span class="text-[10px] uppercase font-mono tracking-wider text-emerald-400 font-semibold">Leadership & Athletics</span>
+          <h4 class="text-lg font-bold text-white mt-1 mb-2">Kabaddi Team Captain</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Captained a district-level competitive Kabaddi squad, coordinating 12+ players across 10+ high-pressure tournaments.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-xs uppercase font-mono tracking-widest text-teal-400 mb-2">06. Academics</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">Education</h3>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+        <!-- College -->
+        <div class="lg:col-span-2 glass-card p-6 sm:p-8 rounded-2xl border border-slate-800/90 relative">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+            <div>
+              <h4 class="text-xl font-bold text-white">UPES, Dehradun</h4>
+              <p class="text-sm font-semibold text-teal-400">B.Tech in Computer Science and Engineering (AI/ML)</p>
+            </div>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs font-mono text-slate-300">
+              Aug 2023 – Jun 2027
+            </span>
+          </div>
+
+          <div class="mb-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-teal-500/10 border border-teal-500/25 text-teal-300 font-mono text-sm font-bold">
+              CGPA: 7.98 / 10.0
+            </div>
+          </div>
+
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Focused on Artificial Intelligence, Machine Learning, Distributed Backend Systems, Database Engineering, and Algorithmic Problem Solving. Active participant in collegiate hackathons, open-source development, and technical team leadership.
+          </p>
+        </div>
+
+        <!-- Schooling -->
+        <div class="space-y-4">
+          <div class="glass-panel p-5 rounded-xl border border-slate-800">
+            <div class="flex items-center justify-between mb-1">
+              <h5 class="font-bold text-white text-sm">Class XII (HSC)</h5>
+              <span class="text-xs font-mono text-teal-400 font-bold">82.00%</span>
+            </div>
+            <p class="text-xs text-slate-400">Maharashtra State Board · 2022</p>
+          </div>
+
+          <div class="glass-panel p-5 rounded-xl border border-slate-800">
+            <div class="flex items-center justify-between mb-1">
+              <h5 class="font-bold text-white text-sm">Class X (SSC)</h5>
+              <span class="text-xs font-mono text-teal-400 font-bold">87.80%</span>
+            </div>
+            <p class="text-xs text-slate-400">Maharashtra State Board · 2020</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-xs uppercase font-mono tracking-widest text-teal-400 mb-2">07. Get in Touch</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">Let's Connect</h3>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          I am currently open to full-time Software Engineer positions, backend engineering roles, and internships.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Left: Quick Direct Contact Cards -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <!-- Email Card -->
+          <div class="glass-card p-5 rounded-xl border border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="p-2.5 rounded-lg bg-teal-500/10 text-teal-400 border border-teal-500/20">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-[11px] text-slate-400">Direct Email</p>
+                <a href="mailto:vaibhav.122528@gmail.com" class="text-sm font-semibold text-white hover:text-teal-300 font-mono transition-colors">
+                  vaibhav.122528@gmail.com
+                </a>
+              </div>
+            </div>
+            <button onclick="copyToClipboard('vaibhav.122528@gmail.com', 'Email copied!')" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors" title="Copy Email">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="glass-card p-5 rounded-xl border border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="p-2.5 rounded-lg bg-teal-500/10 text-teal-400 border border-teal-500/20">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-[11px] text-slate-400">Phone / WhatsApp</p>
+                <a href="tel:+919321669504" class="text-sm font-semibold text-white hover:text-teal-300 font-mono transition-colors">
+                  +91 9321669504
+                </a>
+              </div>
+            </div>
+            <button onclick="copyToClipboard('+919321669504', 'Phone number copied!')" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors" title="Copy Phone">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Location Card -->
+          <div class="glass-card p-5 rounded-xl border border-slate-800 flex items-center gap-3">
+            <div class="p-2.5 rounded-lg bg-teal-500/10 text-teal-400 border border-teal-500/20">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-[11px] text-slate-400">Location</p>
+              <p class="text-sm font-semibold text-white">Dehradun, Uttarakhand, India</p>
+            </div>
+          </div>
+
+          <!-- Social Links Grid -->
+          <div class="grid grid-cols-3 gap-3 pt-2">
+            <a href="https://github.com/Vaibhav-learn" target="_blank" rel="noreferrer" class="glass-panel p-3.5 rounded-xl border border-slate-800 text-center hover:border-teal-500/40 transition-colors group">
+              <i data-lucide="github" class="w-5 h-5 mx-auto text-slate-300 group-hover:text-white mb-1"></i>
+              <span class="text-[11px] text-slate-400 group-hover:text-slate-200">GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/V28" target="_blank" rel="noreferrer" class="glass-panel p-3.5 rounded-xl border border-slate-800 text-center hover:border-teal-500/40 transition-colors group">
+              <i data-lucide="linkedin" class="w-5 h-5 mx-auto text-slate-300 group-hover:text-sky-400 mb-1"></i>
+              <span class="text-[11px] text-slate-400 group-hover:text-slate-200">LinkedIn</span>
+            </a>
+            <a href="https://leetcode.com/vs05" target="_blank" rel="noreferrer" class="glass-panel p-3.5 rounded-xl border border-slate-800 text-center hover:border-teal-500/40 transition-colors group">
+              <i data-lucide="code-2" class="w-5 h-5 mx-auto text-slate-300 group-hover:text-amber-400 mb-1"></i>
+              <span class="text-[11px] text-slate-400 group-hover:text-slate-200">LeetCode</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Message Form -->
+        <div class="lg:col-span-7">
+          <form id="contact-form" class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-4">
+            <h4 class="text-lg font-bold text-white mb-2">Send a Message</h4>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-slate-400 mb-1">Your Name</label>
+                <input type="text" id="sender-name" required placeholder="Alex Turner" class="w-full px-4 py-2.5 rounded-lg bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-teal-400 transition-colors">
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-slate-400 mb-1">Your Email</label>
+                <input type="email" id="sender-email" required placeholder="alex@company.com" class="w-full px-4 py-2.5 rounded-lg bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-teal-400 transition-colors">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Subject</label>
+              <input type="text" id="sender-subject" required placeholder="Software Engineer Opportunity / Project Inquiry" class="w-full px-4 py-2.5 rounded-lg bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-teal-400 transition-colors">
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Message</label>
+              <textarea id="sender-message" rows="4" required placeholder="Hi Vaibhav, we came across your work on FastAPI backend architecture..." class="w-full px-4 py-2.5 rounded-lg bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-teal-400 transition-colors"></textarea>
+            </div>
+
+            <button type="submit" class="w-full sm:w-auto px-6 py-3 rounded-lg bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-teal-500/25 transition-all hover:scale-[1.01] active:scale-[0.99]">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-[#060911] py-8 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-teal-400"></span>
+        <span class="font-mono text-slate-400">Vaibhav Balwant Singh</span>
+      </div>
+      <p>© 2026 Vaibhav Balwant Singh. Built with HTML5, Tailwind CSS, and Vanilla JavaScript.</p>
+      <a href="#" class="text-slate-400 hover:text-teal-400 flex items-center gap-1 transition-colors">
+        <span>Back to top</span>
+        <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- RESUME MODAL -->
+  <div id="resume-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4 overflow-y-auto">
+    <div class="relative w-full max-w-4xl bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden my-8 max-h-[92vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between no-print">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="file-text" class="w-5 h-5 text-teal-400"></i>
+          <h3 class="font-bold text-white text-sm sm:text-base">Resume Preview – Vaibhav Balwant Singh</h3>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="px-3.5 py-1.5 rounded-lg bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 shadow transition-all">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+            <span>Print / Save PDF</span>
+          </button>
+          <button id="close-resume-btn" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors" aria-label="Close modal">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable Resume Sheet Content -->
+      <div class="overflow-y-auto p-6 sm:p-10 bg-white text-slate-900 text-xs leading-normal select-text" id="printable-resume">
+        
+        <!-- Header -->
+        <div class="text-center border-b border-slate-300 pb-4 mb-4">
+          <h1 class="text-2xl font-bold tracking-tight text-slate-900 uppercase">Vaibhav Balwant Singh</h1>
+          <p class="text-xs font-semibold text-slate-700 mt-1">Software Engineer (Backend) | Python, FastAPI, REST APIs, Docker, CI/CD</p>
+          <div class="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[11px] text-slate-600 mt-1 font-mono">
+            <span>Dehradun, Uttarakhand, India</span>
+            <span>•</span>
+            <a href="tel:+919321669504" class="text-slate-800 hover:underline">+91 9321669504</a>
+            <span>•</span>
+            <a href="mailto:vaibhav.122528@gmail.com" class="text-slate-800 hover:underline">vaibhav.122528@gmail.com</a>
+          </div>
+          <div class="flex flex-wrap justify-center gap-x-3 text-[11px] text-slate-700 mt-1 font-mono">
+            <a href="https://github.com/Vaibhav-learn" target="_blank" class="text-blue-700 hover:underline">github.com/Vaibhav-learn</a>
+            <span>•</span>
+            <a href="https://linkedin.com/in/V28" target="_blank" class="text-blue-700 hover:underline">linkedin.com/in/V28</a>
+            <span>•</span>
+            <a href="https://leetcode.com/vs05" target="_blank" class="text-blue-700 hover:underline">leetcode.com/vs05</a>
+          </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="mb-4">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-1.5">Professional Summary</h2>
+          <p class="text-[11px] text-slate-800 text-justify leading-relaxed">
+            Software engineer with backend experience building REST APIs and services in Python, FastAPI, Flask and PostgreSQL across two internships and end-to-end projects. Strong in data structures and algorithms, object-oriented programming and system design fundamentals. Built async, high-concurrency FastAPI services with JWT authentication and role-based access control, shipped with Docker, AWS and GitHub Actions CI/CD, and tested with pytest. Also built a LightGBM pricing model on 250K records (accuracy from 75% to 82%) and a YOLOv8 + Gemini waste-detection pipeline with a live deployed demo. Hands-on learning and coding practice with LLM APIs, RAG workflows, embeddings/vector databases, prompt engineering, and integrating different language models into applications.
+          </p>
+        </div>
+
+        <!-- Education -->
+        <div class="mb-4">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-1.5">Education</h2>
+          <div class="flex justify-between items-baseline">
+            <span class="font-bold text-slate-900 text-[11px]">UPES, Dehradun – B.Tech in Computer Science and Engineering (AI/ML)</span>
+            <span class="text-[11px] text-slate-600">Aug 2023 – Jun 2027</span>
+          </div>
+          <p class="text-[11px] text-slate-800 font-semibold">CGPA: 7.98 / 10.0</p>
+          <div class="flex justify-between text-[11px] text-slate-700 mt-0.5">
+            <span>Class XII, Maharashtra State Board, 2022: 82%</span>
+            <span>Class X, Maharashtra State Board, 2020: 87.80%</span>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="mb-4">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-1.5">Technical Skills</h2>
+          <div class="space-y-1 text-[11px] text-slate-800">
+            <p><strong>Languages and Core CS:</strong> Python, Java, Data Structures and Algorithms, Object-Oriented Programming, System Design Fundamentals</p>
+            <p><strong>Backend and APIs:</strong> FastAPI, Flask, REST APIs, WebSockets, JWT/bcrypt Authentication, Role-Based Access Control</p>
+            <p><strong>Databases:</strong> PostgreSQL, SQLAlchemy, Alembic</p>
+            <p><strong>Cloud, DevOps and Testing:</strong> Docker, Docker Compose, AWS, GitHub Actions (CI/CD), pytest</p>
+            <p><strong>AI/ML:</strong> LLM API Integration (Gemini; model-integration practice), RAG Fundamentals, Embeddings and Vector Database Fundamentals, Prompt Engineering, LightGBM, XGBoost, YOLOv8</p>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="mb-4">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-1.5">Experience</h2>
+          
+          <!-- Exp 1 -->
+          <div class="mb-2.5">
+            <div class="flex justify-between items-baseline font-bold text-slate-900 text-[11px]">
+              <span>Naiyo (Remote) – Full Stack Developer Intern</span>
+              <span class="text-slate-600 font-normal">Apr 2026 – Aug 2026</span>
+            </div>
+            <ul class="list-disc ml-4 space-y-1 text-[11px] text-slate-800 mt-1">
+              <li>Redesigned the PostgreSQL schema and optimized queries for the prediction service, reducing data retrieval latency by 20%.</li>
+              <li>Improved medicine price (MRP) prediction accuracy from 75% to 82% by replacing a single model with segmented, tier-based LightGBM models (Tweedie regression) trained on a 250K-row pharmaceutical dataset.</li>
+            </ul>
+          </div>
+
+          <!-- Exp 2 -->
+          <div>
+            <div class="flex justify-between items-baseline font-bold text-slate-900 text-[11px]">
+              <span>Paatti Vaithiyapodi (Remote) – Backend Developer Intern and Project Team Lead</span>
+              <span class="text-slate-600 font-normal">Jun 2025 – Aug 2025</span>
+            </div>
+            <ul class="list-disc ml-4 space-y-1 text-[11px] text-slate-800 mt-1">
+              <li>Architected Flask backend modules for order and wishlist management, designing the data models and REST endpoints that powered the mobile app.</li>
+              <li>Refactored and tuned REST APIs to improve performance and scalability across core services.</li>
+              <li>Led a cross-functional team to design and ship a Flask-based mobile app backend from concept to deployment.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="mb-4">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-1.5">Projects</h2>
+
+          <!-- Project 1 -->
+          <div class="mb-2.5">
+            <div class="flex justify-between items-baseline text-[11px]">
+              <span class="font-bold text-slate-900">Plasto – Distribution Agency Management System</span>
+              <span class="italic text-slate-600">In Progress | <a href="https://github.com/Vaibhav-learn" target="_blank" class="text-blue-700 underline">GitHub</a></span>
+            </div>
+            <p class="text-[10px] text-slate-600 italic">FastAPI, PostgreSQL, SQLAlchemy, Alembic, WebSockets, JWT, pytest, Docker, AWS, GitHub Actions</p>
+            <ul class="list-disc ml-4 space-y-0.5 text-[11px] text-slate-800 mt-1">
+              <li>Building a supply chain and distribution backend with JWT/bcrypt authentication and server-side role-based access control (admin, office worker, field worker) on every protected route.</li>
+              <li>Designing correctness-critical logic: stock as a ledger of movements that never goes below zero, server-calculated order totals, an approve-then-dispatch order state machine, and live worker tracking over WebSockets.</li>
+              <li>Testing with pytest and Alembic migrations; shipping via Docker Compose, AWS and GitHub Actions CI/CD.</li>
+            </ul>
+          </div>
+
+          <!-- Project 2 -->
+          <div>
+            <div class="flex justify-between items-baseline text-[11px]">
+              <span class="font-bold text-slate-900">Chokho AI – Waste Detection and Route Optimization</span>
+              <span class="italic text-slate-600">Dec 2025 – Apr 2026 | <a href="https://github.com/Vaibhav-learn" target="_blank" class="text-blue-700 underline">GitHub / Live Demo</a></span>
+            </div>
+            <p class="text-[10px] text-slate-600 italic">FastAPI, YOLOv8, Gemini API, PostgreSQL, Cloudinary</p>
+            <ul class="list-disc ml-4 space-y-0.5 text-[11px] text-slate-800 mt-1">
+              <li>Built async FastAPI services running a multi-stage inference pipeline (YOLOv8 + Gemini API) that detects and validates waste from geotagged images under concurrent load, achieving 70–96% detection accuracy across varied surroundings and image conditions.</li>
+              <li>Automated before/after cleanup verification with GPS consistency checks, removing manual verification effort.</li>
+              <li>Implemented logistics route optimization (K-Means clustering + TSP) to minimize total travel distance across collection routes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Achievements & Certifications -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-1.5">Achievements and Certifications</h2>
+          <ul class="list-disc ml-4 space-y-1 text-[11px] text-slate-800">
+            <li>2nd place at UDBHAV (Uttarakhand AI Mission Hackathon, 20+ teams) and at PROTORUSH 2.0 (ACM hackathon); Top 15 of 100+ teams in Build4Bharat.</li>
+            <li>Shortlisted among the top 50 teams in the institute-level round of Smart India Hackathon, India’s national-level hackathon.</li>
+            <li>B10x Certificate: startup-building program covering ideation, business modeling and pitching.</li>
+            <li>Captained a district-level Kabaddi team, coordinating 12+ players across 10+ competitive matches.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-slate-900 border border-teal-500/40 text-slate-100 px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3">
+      <div class="p-1 rounded-full bg-teal-500/20 text-teal-400">
+        <i data-lucide="check" class="w-4 h-4"></i>
+      </div>
+      <span id="toast-message" class="text-xs font-medium">Text copied!</span>
+    </div>
+  </div>
+
+  <!-- JS Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
